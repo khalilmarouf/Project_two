@@ -1085,6 +1085,8 @@ header .container nav .form i {
     background-color: var(--main-color);
     color: white;
     border-radius: 0 10px 10px 0;
+    z-index: 99;
+    cursor: pointer;
 }
 .subscribe .container p {
     flex-basis: 60%;
@@ -1129,6 +1131,7 @@ header .container nav .form i {
     border: none;
     color: white;
     border-radius: 4px;
+    cursor: pointer;
 }
 @media (max-width: 767px) {
     .contact .container .contact-content form input[type="submit"] {
