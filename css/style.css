@@ -215,10 +215,22 @@ header .container nav .form i {
 .landing {
     min-height: 100vh;
     background-color: #333;
-    background-image: url(../images/landing.jpg);
     background-size: cover;
     position: relative;
 }
+.landing .landing-background  {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+.landing .landing-background img {
+    transition: ease 1s;
+    min-width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    flex: 0 0 auto;
+}
+
 
 .landing .overlay {
     background-color: rgb(0 0 0 / 60%);
@@ -229,7 +241,6 @@ header .container nav .form i {
     height: 100%;
     z-index: 1;
 }
-
 .landing .text {
     position: absolute;
     z-index: 1;
@@ -250,6 +261,11 @@ header .container nav .form i {
 }
 
 @media (max-width: 767px) {
+    .landing .landing-background img {
+        width: 100%;
+        transition: ease .5s;
+
+    }
     .landing .text {
         width: 100%;
         justify-content: center;
@@ -281,10 +297,12 @@ header .container nav .form i {
 
 .landing .fa-angle-left {
     left: 30px;
+    cursor: pointer;
 }
 
 .landing .fa-angle-right {
     right: 30px;
+    cursor: pointer;
 }
 
 @media (max-width: 767px) {
@@ -308,15 +326,20 @@ header .container nav .form i {
 }
 
 .landing .bullets li {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     border: 1px white solid;
+    transition: .3s;
+    cursor: pointer;
 }
 
 .landing .bullets li.active {
     background-color: var(--main-color);
     border-color: var(--main-color);
+    transform-origin: bottom bottom;
+    transform: scale(1.3);
+    cursor:auto;
 }
 
 /* Start Services */
